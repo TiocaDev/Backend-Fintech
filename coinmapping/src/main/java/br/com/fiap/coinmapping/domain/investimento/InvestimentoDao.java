@@ -7,6 +7,11 @@ import java.util.List;
 
 public class InvestimentoDao {
     private Connection conexao;
+
+
+
+
+
     public void cadastrar(Investimento investimento){
     }
     public Despesa pesquisar(long id){
@@ -19,4 +24,6 @@ public class InvestimentoDao {
     }
     public void remover(long id){
     }
+
+
 }

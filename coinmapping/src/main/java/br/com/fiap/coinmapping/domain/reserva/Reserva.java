@@ -8,7 +8,7 @@ public class Reserva {
   private Double valor;
   private String descricao;
   private LocalDate dataInicio;
-  private LocalDate daraPrazo;
+  private LocalDate dataPrazo;
 
   public Reserva(Long id, String nome, Double valor, String descricao, LocalDate dataInicio, LocalDate daraPrazo) {
     this.id = id;
@@ -16,7 +16,7 @@ public class Reserva {
     this.valor = valor;
     this.descricao = descricao;
     this.dataInicio = dataInicio;
-    this.daraPrazo = daraPrazo;
+    this.dataPrazo = dataPrazo;
   }
 
   public Reserva(String nome, Double valor, String descricao, LocalDate dataInicio, LocalDate daraPrazo) {
@@ -24,10 +24,13 @@ public class Reserva {
     this.valor = valor;
     this.descricao = descricao;
     this.dataInicio = dataInicio;
-    this.daraPrazo = daraPrazo;
+    this.dataPrazo = dataPrazo;
   }
 
   public Reserva(){}
+
+  public Reserva(String carro, double valor, String queroRealizarMeuSonho, String date, String date1) {
+  }
 
   public Long getId() {
     return id;
@@ -69,11 +72,11 @@ public class Reserva {
     this.dataInicio = dataInicio;
   }
 
-  public LocalDate getDaraPrazo() {
-    return daraPrazo;
+  public LocalDate getDataPrazo() {
+    return dataPrazo;
   }
 
-  public void setDaraPrazo(LocalDate daraPrazo) {
-    this.daraPrazo = daraPrazo;
+  public void setDataPrazo(LocalDate dataPrazo) {
+    this.dataPrazo = dataPrazo;
   }
 }

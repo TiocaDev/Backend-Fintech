@@ -1,5 +1,7 @@
 package br.com.fiap.coinmapping;
 
+import br.com.fiap.coinmapping.domain.reserva.Reserva;
+import br.com.fiap.coinmapping.domain.reserva.ReservaDao;
 import br.com.fiap.coinmapping.service.ConnectionFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,8 +20,10 @@ public class CoinmappingApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 				try {
-					Connection conexao = ConnectionFactory.getConnection();
-					System.out.println("Conexão realizada!");
+					ReservaDao dao = new ReservaDao();
+					Reserva reserva = new Reserva("Carro",199.99,"Quero realizar meu sonho","2025-04-18","2025-05-18");
+					dao.cadastrar(reserva);
+					dao.fecharConexao();
 				} catch (SQLException e) {
 					System.err.println(e.getMessage());
 				}
